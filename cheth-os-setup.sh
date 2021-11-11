@@ -16,10 +16,10 @@ read gitUsername
 echo "Oh okay $gitUsername got it! And.. email id?"
 read emailId
 
-# Homebrew - Installation
-echo "Installing Homebrew"
 
+# Homebrew - Installation
 if test ! $(which brew); then
+  echo "Installing Homebrew"
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
 
@@ -92,8 +92,8 @@ homebrew_cask_packages=(
 sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
 
 # Installing nvm
-echo "Installing nvm"
 if test ! $(which nvm); then
+  echo "Installing nvm"
   /bin/bash -c "$(curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 )"
 fi
