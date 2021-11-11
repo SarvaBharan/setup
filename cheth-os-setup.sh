@@ -20,13 +20,17 @@ echo "Oh okay $gitUsername got it! And.. email id?"
 read emailId
 
 
-# Homebrew - Installation
+# Check for Homebrew,
+# Install if we don't have it
 if test ! $(which brew); then
   echo "Installing Homebrew"
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
 
-# Install Homebrew Packages
+# Make sure we’re using the latest Homebrew.
+brew update
+
+# Homebrew Packages
 cd ~
 echo "Installing Homebrew packages"
 
@@ -94,7 +98,8 @@ homebrew_cask_packages=(
 # http://npm.github.io/installation-setup-docs/installing/a-note-on-permissions.html
 sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
 
-# Installing nvm
+# Check for nvm,
+# Install if we don't have it
 if test ! $(which nvm); then
   echo "Installing nvm"
   /bin/bash -c "$(curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
