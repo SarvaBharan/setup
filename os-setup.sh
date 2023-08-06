@@ -113,7 +113,7 @@ homebrew_cask_packages=(
 
 # extras
 
-# apps in mac store
+# apps in the Mac store
 # runcat
 
 # apps in setapp app
@@ -121,9 +121,9 @@ homebrew_cask_packages=(
 # cleanmymac
 
 # install n (https://github.com/tj/n)
-# make sure you follow steps here to take control of /usr folders
+# make sure you follow the steps here to take control of /usr folders
 
-# configure npm permissions to current user 
+# configure npm permissions to the current user 
 # http://npm.github.io/installation-setup-docs/installing/a-note-on-permissions.html
 sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
 
@@ -144,7 +144,7 @@ git config --global user.name $gitUsername
 git config --global user.email $emailId
 gh config set git_protocol "ssh"
 
-# Create projects directory called kitchen
+# Create a projects directory called kitchen
 echo "Creating a Kitchen directory"
 mkdir -p $HOME/documents/kitchen
 
