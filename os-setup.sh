@@ -1,6 +1,6 @@
-# how to run this thingy
-# create a file on your mac called setup.sh
-# run it from terminal with: sh setup.sh
+# How to run this thingy:
+# create a file on your Mac called setup.sh
+# run it from the terminal with sh setup.sh
 
 # Inspired by https://twitter.com/damcclean
 
@@ -10,7 +10,7 @@ set -euo pipefail
 echo "Setting up your Mac..."
 sudo -v
 
-# Keep-alive: update existing `sudo` time stamp until the script has finished.
+# Keep-alive: update the existing `sudo` time stamp until the script has finished.
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 echo "But first, what's your github username?"
