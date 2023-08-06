@@ -1,2 +1,2 @@
-# setup
+# Setup
 Includes full OS setup
